@@ -23,4 +23,3 @@ You can chat, generate ideas, write content, or even add your own AI-powered fea
 ### 1️⃣ Clone this repository
 ```bash
 git clone https://github.com/<your-username>/ai-text-assistant.git
-cd ai-text-assistant
