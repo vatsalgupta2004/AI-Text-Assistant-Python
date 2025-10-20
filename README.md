@@ -11,7 +11,7 @@ You can chat, generate ideas, write content, or even add your own AI-powered fea
 
 ## ✨ Features
 - 🧠 Ask anything and get AI-powered responses  
-- 💬 Simple CLI interface (no web or UI needed)  
+- 💬 Simple CLI interface, if possible then you can add web UI 
 - 💾 Saves chat history locally  
 - ⚙️ Customizable temperature/creativity level  
 - 🧩 Extendable — add new modes (summarizer, translator, idea generator, etc.)
