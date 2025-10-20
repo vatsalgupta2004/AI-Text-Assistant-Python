@@ -31,7 +31,12 @@ CORS(app)
 
 # Initialize components
 config = Config()
-assistant = AIAssistant(config)
+try:
+    assistant = AIAssistant(config)
+except (ValueError, ImportError) as e:
+    print(f"Warning: AI assistant initialization failed: {e}")
+    print("Web UI will start but AI features may not work without valid API keys.")
+    assistant = None
 history = ChatHistory()
 
 @app.route('/')
@@ -62,6 +67,9 @@ def chat():
         
         if not data or 'message' not in data:
             return jsonify({"error": "No message provided"}), 400
+        
+        if not assistant:
+            return jsonify({"error": "AI assistant not initialized. Please configure API keys."}), 503
         
         user_message = data['message']
         mode = data.get('mode', 'chat')
